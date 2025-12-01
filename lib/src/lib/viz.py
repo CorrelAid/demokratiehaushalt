@@ -25,7 +25,7 @@ def count_plot(df: pl.DataFrame, col: str, missing_label: str = "Missing"):
     sns.barplot(
         data=counts_df.to_pandas(), y=col, x="n", order=counts_df[col].to_list(), ax=ax
     )
-    ax.set_title(f"Counts of {col} (incl. '{missing_label}')")
+    ax.set_title(f"Counts of {col}")
     ax.set_xlabel("Count")
     ax.set_ylabel(col)
     plt.tight_layout()
